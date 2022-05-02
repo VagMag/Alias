@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EfW-d2-VEw">
+                                <rect key="frame" x="132" y="285.5" width="150" height="325"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-2u-P2A">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="NT8-70-2iv"/>
+                                            <constraint firstAttribute="width" constant="150" id="eCP-AM-1gt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Играть">
+                                            <backgroundConfiguration key="background" cornerRadius="19">
+                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="qoX-Ps-B3F" kind="show" id="NsO-N9-DEO"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ex-Or-YFf">
+                                        <rect key="frame" x="0.0" y="175" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="A9P-gk-Kwb"/>
+                                            <constraint firstAttribute="width" constant="150" id="yWc-dl-P7W"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Правила">
+                                            <backgroundConfiguration key="background" cornerRadius="19">
+                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="U4d-Cx-DAb" kind="show" id="tNP-cg-1Wm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIi-GE-izN">
+                                <rect key="frame" x="166" y="86" width="83" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EfW-d2-VEw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YDS-0s-D0R"/>
+                            <constraint firstItem="EfW-d2-VEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YKP-Md-A5k"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="80"/>
+        </scene>
+        <!--Choice View Controller-->
+        <scene sceneID="UZB-oR-HLS">
+            <objects>
+                <viewController id="qoX-Ps-B3F" customClass="ChoiceViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Axh-nI-wU5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-5f-JCb">
+                                <rect key="frame" x="132" y="83.5" width="150" height="675"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-2Q-SMY">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="110-BX-8ig"/>
+                                            <constraint firstAttribute="width" constant="150" id="aYg-hE-5AU"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=" Тема1">
+                                            <backgroundConfiguration key="background" cornerRadius="19">
+                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Nlz-C6-sPy" kind="show" id="bpa-Tb-xRU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-Vc-D1V">
+                                        <rect key="frame" x="0.0" y="175" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="D6e-tE-ttf"/>
+                                            <constraint firstAttribute="height" constant="150" id="GSw-MN-TW4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Тема2">
+                                            <backgroundConfiguration key="background" cornerRadius="19">
+                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Nlz-C6-sPy" kind="show" id="LQm-t3-Wc1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-5b-rmE">
+                                        <rect key="frame" x="0.0" y="350" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="Clo-tP-zVe"/>
+                                            <constraint firstAttribute="width" constant="150" id="GxE-p6-zFO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Тема3">
+                                            <backgroundConfiguration key="background" cornerRadius="19">
+                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Nlz-C6-sPy" kind="show" id="Q34-Kh-Y6t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-cE-aOM">
+                                        <rect key="frame" x="0.0" y="525" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="SEr-bc-Grh"/>
+                                            <constraint firstAttribute="height" constant="150" id="gMS-1m-r44"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Тема4">
+                                            <backgroundConfiguration key="background" cornerRadius="19">
+                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Nlz-C6-sPy" kind="show" id="q0x-VE-kTP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dlx-Mv-q6B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eHM-5f-JCb" firstAttribute="centerX" secondItem="Axh-nI-wU5" secondAttribute="centerX" id="DZU-id-u8d"/>
+                            <constraint firstItem="eHM-5f-JCb" firstAttribute="centerY" secondItem="Axh-nI-wU5" secondAttribute="centerY" id="hs4-H3-GaW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SUQ-S5-Gay"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zd-Ol-FgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="80"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="1an-Mv-NQ5">
+            <objects>
+                <viewController id="Nlz-C6-sPy" customClass="GameViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ndd-zN-Fz0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XQ-h1-FMo">
+                                <rect key="frame" x="136" y="391" width="142.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Счетчик" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cet-mc-41X">
+                                <rect key="frame" x="331" y="44" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Таймер" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2h-ba-VMc">
+                                <rect key="frame" x="177" y="291" width="61" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-x6-0GZ">
+                                <rect key="frame" x="44.5" y="612" width="325" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDv-i9-z63">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="GwK-Ad-li6"/>
+                                            <constraint firstAttribute="width" constant="150" id="eEb-dc-r7x"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Правильно">
+                                            <backgroundConfiguration key="background" cornerRadius="19">
+                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPB-69-VsD">
+                                        <rect key="frame" x="175" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Tda-wO-vhY"/>
+                                            <constraint firstAttribute="height" constant="150" id="gvd-Cv-JAl"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Пропустить">
+                                            <backgroundConfiguration key="background" cornerRadius="19">
+                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e8v-yy-Ml5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8XQ-h1-FMo" firstAttribute="centerX" secondItem="Ndd-zN-Fz0" secondAttribute="centerX" id="I0a-kG-QDQ"/>
+                            <constraint firstItem="e8v-yy-Ml5" firstAttribute="bottom" secondItem="6b8-x6-0GZ" secondAttribute="bottom" constant="80" id="YAe-sY-ftl"/>
+                            <constraint firstItem="6b8-x6-0GZ" firstAttribute="centerX" secondItem="Ndd-zN-Fz0" secondAttribute="centerX" id="tbU-0N-Aov"/>
+                            <constraint firstItem="8XQ-h1-FMo" firstAttribute="centerY" secondItem="Ndd-zN-Fz0" secondAttribute="centerY" id="wrG-4a-JJr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AAY-ne-cBG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuQ-Lc-0d9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="80"/>
+        </scene>
+        <!--Result View Controller-->
+        <scene sceneID="AEb-z6-h3q">
+            <objects>
+                <viewController id="rpw-lx-O2y" customClass="ResultViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DZg-kA-uHW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OEi-tQ-kGG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXO-n2-8HI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510" y="105"/>
+        </scene>
+        <!--Rules View Controller-->
+        <scene sceneID="4HF-X3-Tgj">
+            <objects>
+                <viewController id="U4d-Cx-DAb" customClass="RulesViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LvF-mo-Yww">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ПРАВИЛА игры" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-RZ-V2A">
+                                <rect key="frame" x="20" y="20" width="374" height="802"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="irn-ds-wV6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="irn-ds-wV6" firstAttribute="bottom" secondItem="NrM-RZ-V2A" secondAttribute="bottom" constant="20" id="2C7-aH-hHj"/>
+                            <constraint firstItem="NrM-RZ-V2A" firstAttribute="centerX" secondItem="LvF-mo-Yww" secondAttribute="centerX" id="5lM-9m-dwe"/>
+                            <constraint firstItem="irn-ds-wV6" firstAttribute="trailing" secondItem="NrM-RZ-V2A" secondAttribute="trailing" constant="20" id="It8-LK-7kH"/>
+                            <constraint firstItem="NrM-RZ-V2A" firstAttribute="centerY" secondItem="LvF-mo-Yww" secondAttribute="centerY" id="aBV-eD-TQc"/>
+                            <constraint firstItem="NrM-RZ-V2A" firstAttribute="leading" secondItem="irn-ds-wV6" secondAttribute="leading" constant="20" id="hy0-p6-GZB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rBQ-VM-lCt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwh-fq-WXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="856"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Q34-Kh-Y6t"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
