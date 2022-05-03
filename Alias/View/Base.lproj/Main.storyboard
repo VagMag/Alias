@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EfW-d2-VEw">
-                                <rect key="frame" x="132" y="285.5" width="150" height="325"/>
+                                <rect key="frame" x="120" y="259.66666666666669" width="150" height="325.00000000000006"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-2u-P2A">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -78,11 +78,11 @@
             <objects>
                 <viewController id="qoX-Ps-B3F" customClass="ChoiceViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Axh-nI-wU5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-5f-JCb">
-                                <rect key="frame" x="132" y="83.5" width="150" height="675"/>
+                                <rect key="frame" x="120" y="57.666666666666686" width="150" height="675"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-2Q-SMY">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -169,11 +169,11 @@
             <objects>
                 <viewController id="Nlz-C6-sPy" customClass="GameViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ndd-zN-Fz0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XQ-h1-FMo">
-                                <rect key="frame" x="136" y="391" width="142.5" height="60"/>
+                                <rect key="frame" x="124.00000000000001" y="365" width="142.33333333333337" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -193,7 +193,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-x6-0GZ">
-                                <rect key="frame" x="44.5" y="612" width="325" height="150"/>
+                                <rect key="frame" x="32.666666666666657" y="560" width="325" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDv-i9-z63">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -244,7 +244,7 @@
             <objects>
                 <viewController id="rpw-lx-O2y" customClass="ResultViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DZg-kA-uHW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="OEi-tQ-kGG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -259,12 +259,92 @@
             <objects>
                 <viewController id="U4d-Cx-DAb" customClass="RulesViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LvF-mo-Yww">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ПРАВИЛА игры" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-RZ-V2A">
-                                <rect key="frame" x="20" y="20" width="374" height="802"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-RZ-V2A">
+                                <rect key="frame" x="20" y="20" width="350" height="750"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text" base64-UTF8="YES">
+0J/RgNCw0LLQuNC70LAg0LjQs9GA0YsKCiAKQWxpYXM6INCh0LrQsNC20Lgg0LjQvdCw0YfQtQoK0JIg
+0LjQs9GA0YMg0LjQs9GA0LDRjtGCINC60L7QvNCw0L3QtNCw0LzQuCDQuNC3INC00LLRg9GFINC40LvQ
+uCDQsdC+0LvQtdC1CtGH0LXQu9C+0LLQtdC6LiDQl9Cw0LTQsNGH0LAg0LrQsNC20LTQvtCz0L4g0LjQ
+s9GA0L7QutCwINC60L7QvNCw0L3QtNGLIC0K0L7QsdGK0Y/RgdC90LjRgtGMINC60LDQuiDQvNC+0LbQ
+vdC+INCx0L7Qu9GM0YjQtSDRgdC70L7QsgrQvtGC0L7QsdGA0LDQttCw0LXQvNGL0YUg0L3QsCDRjdC6
+0YDQsNC90LUg0LfQsCDQvtCz0YDQsNC90LjRh9C10L3QvdC+0LUK0LLRgNC10LzRjyDQtNGA0YPQs9C4
+0LzQuCDRgdC70L7QstCw0LzQuCwg0LjRgdC/0L7Qu9GM0LfRg9GPLArQvdCw0L/RgNC40LzQtdGALCDR
+gdC40L3QvtC90LjQvNGLLCDQsNC90YLQvtC90LjQvNGLINC4INC/0L7QtNGB0LrQsNC30LrQuArRgtCw
+0LosINGH0YLQvtCx0Ysg0YfQu9C10L3RiyDQstCw0YjQtdC5INC60L7QvNCw0L3QtNGLINGB0LzQvtCz
+0LvQuArQvtGC0LPQsNC00LDRgtGMINC60LDQuiDQvNC+0LbQvdC+INCx0L7Qu9GM0YjQtSDRgdC70L7Q
+siDQv9GA0LXQttC00LUK0YfQtdC8INC40YHRgtC10YfQtdGCINCy0YDQtdC80Y8uINCn0LXQvCDQsdC+
+0LvRjNGI0LUg0YHQu9C+0LIK0L7RgtCz0LDQtNCw0LvQsCDQutC+0LzQsNC90LTQsCwg0YLQtdC8INCx
+0L7Qu9GM0YjQtSDQvtC90LAK0LfQsNGA0LDQsdC+0YLQsNC10YIg0LHQsNC70LvQvtCyLgoK0J7QsdGK
+0Y/RgdC90LXQvdC40LUg0YHQu9C+0LIKCtCf0YDQuCDQvtCx0YrRj9GB0L3QtdC90LjQuCDRgdC70L7Q
+siDQvdC10LvRjNC30Y8g0YPQv9C+0LzQuNC90LDRgtGMCtC60LDQutGD0Y4t0LvQuNCx0L4g0YfQsNGB
+0YLRjCDRgdC70L7QstCwLiDQndCw0L/RgNC40LzQtdGALCDRgdC70L7QstC+CsKr0LrQvtGE0LXQstCw
+0YDQutCwwrsg0L3QtdC70YzQt9GPINC+0LHRitGP0YHQvdGP0YLRjCDQutCw0LogwqvQsNC/0L/QsNGA
+0LDRggrQtNC70Y8g0LLQsNGA0LrQuCDQutC+0YTQtcK7LiDQn9GA0LDQstC40LvRjNC90YvQuSDRgdC/
+0L7RgdC+0LEK0L7QsdGK0Y/RgdC90LXQvdC40Y8g0LHRg9C00LXRgiDRgdC70LXQtNGD0Y7RidC40Lk6
+IMKr0LDQv9C/0LDRgNCw0YIg0LTQu9GPCtC/0YDQuNCz0L7RgtC+0LLQu9C10L3QuNGPINC60YDQtdC/
+0LrQvtCz0L4g0L3QsNC/0LjRgtC60LAsINC60L7RgtC+0YDRi9C5CtC+0LHRi9GH0L3QviDQv9GM0Y7R
+giDQt9CwINC30LDQstGC0YDQsNC60L7QvMK7LiDQnNC+0LbQvdC+CtC40YHQv9C+0LvRjNC30L7QstCw
+0YLRjCDRgdC40L3QvtC90LjQvNGLIC0g0YLQviDQtdGB0YLRjCDQstGLINC80L7QttC10YLQtQrRgdC6
+0LDQt9Cw0YLRjCDCq9C60LjQv9GP0YLQuNGC0YzCuywg0L3QviDQvdC1IMKr0LLQsNGA0LjRgtGMwrsu
+CgrQktGLINC80L7QttC10YLQtSDQuNGB0L/QvtC70YzQt9C+0LLQsNGC0Ywg0LDQvdGC0L7QvdC40LzR
+iy4g0KHQu9C+0LLQvgrCq9Cx0L7Qu9GM0YjQvtC5wrsg0LzQvtC20LXRgiDQsdGL0YLRjCDQvtCx0YrR
+j9GB0L3QtdC90L4g0LrQsNC6CsKr0LDQvdGC0L7QvdC40Lwg0YHQu9C+0LLQsCDQvNCw0LvQtdC90YzQ
+utC40LnCuy4g0JLRiyDQvdC1INC80L7QttC10YLQtQrQuNGB0L/QvtC70YzQt9C+0LLQsNGC0Ywg0LjQ
+vdC+0YHRgtGA0LDQvdC90YvQtSDRj9C30YvQutC4LCDQt9CwCtC40YHQutC70Y7Rh9C10L3QuNC10Lwg
+0YLQtdGFINGB0LvRg9GH0LDQtdCyLCDQutC+0LPQtNCwINCy0YHQtSDQuNCz0YDQvtC60LgK0YHQvtCz
+0LvQsNGB0LjQu9C40YHRjCDRgSDRjdGC0LjQvC4KCtCe0YLQs9Cw0LTQsNC90L3QvtC1INGB0LvQvtCy
+0L4g0LTQvtC70LbQvdC+INGC0L7Rh9C90L4g0YHQvtCy0L/QsNC00LDRgtGMLgrQntCx0YrRj9GB0L3R
+j9GO0YnQuNC5INC40LPRgNC+0Log0L/QvtC80L7Qs9Cw0LXRggrQvtGC0LPQsNC00YvQstCw0Y7RidC4
+0Lwg0L3QsNC50YLQuCDQv9GA0LDQstC40LvRjNC90YPRjiDRhNC+0YDQvNGDCtGB0LvQvtCy0LAuINCV
+0YHQu9C4INGB0LvQvtCy0L4g0YHQvtGB0YLQvtC40YIg0LjQtyDQtNCy0YPRhSDRh9Cw0YHRgtC10Lkg
+0LgK0LrRgtC+LdGC0L4g0L7RgtCz0LDQtNGL0LLQsNC10YIg0L/QtdGA0LLRg9GOINGH0LDRgdGC0Yws
+INCy0Ysg0L/QvtGC0L7QvArQvNC+0LbQtdGC0LUg0LjRgdC/0L7Qu9GM0LfQvtCy0LDRgtGMINGN0YLR
+gyDRh9Cw0YHRgtGMINGB0LvQvtCy0LAg0LIK0LTQsNC70YzQvdC10LnRiNC10Lwg0L7QsdGK0Y/RgdC9
+0LXQvdC40LguCgrQndCw0YfQuNGB0LvQtdC90LjQtSDQvtGH0LrQvtCyCgrQl9CwINC60LDQttC00L7Q
+tSDQvtGC0LPQsNC00LDQvdC90L7QtSDRgdC70L7QstC+INC60L7QvNCw0L3QtNCwCtC/0L7Qu9GD0YfQ
+sNC10YIg0L7QtNC90L4g0L7Rh9C60L4sINCwINC30LAg0L/RgNC+0L/Rg9GJ0LXQvdC90L7QtSDQuNC7
+0LgK0L7RgtCz0LDQtNCw0L3QvdC+0LUg0YEg0L3QsNGA0YPRiNC10L3QuNC10LwgLSDRiNGC0YDQsNGE
+0YPQtdGC0YHRjyAo0LIK0LfQsNCy0LjRgdC40LzQvtGB0YLQuCDQvtGCINC90LDRgdGC0YDQvtC10Lop
+LgoK0JXRgdC70Lgg0L7QsdGK0Y/RgdC90Y/RjtGJ0LjQuSDQuNCz0YDQvtC6INC00L7Qv9GD0YHQutCw
+0LXRgiDQvtGI0LjQsdC60YMgLQrQvdCw0L/RgNC40LzQtdGALCDQvdCw0LfRi9Cy0LDQtdGCINGH0LDR
+gdGC0Ywg0YHQu9C+0LLQsCwg0YPQutCw0LfQsNC90L3QvtCz0L4K0LIg0LrQsNGA0YLQvtGH0LrQtSwg
+0YHQu9C+0LLQviDQvdC1INCx0YPQtNC10YIg0L/RgNC40L3Rj9GC0L4g0LgK0LrQvtC80LDQvdC00LAg
+0L/QvtGC0LXRgNGP0LXRgiAxINC+0YfQutC+LiDQn9C+0Y3RgtC+0LzRgyDQutCw0LbQtNCw0Y8K0LrQ
+vtC80LDQvdC00LAg0LTQvtC70LbQvdCwINCy0L3QuNC80LDRgtC10LvRjNC90L4g0YHQu9GD0YjQsNGC
+0YwK0L7QsdGK0Y/RgdC90LXQvdC40Y8g0LTRgNGD0LPQuNGFINC60L7QvNCw0L3QtC4g0JXRgdC70Lgg
+0YHQu9C+0LLQvgrQutCw0LbQtdGC0YHRjyDRgdC70LjRiNC60L7QvCDRgtGP0LbQtdC70YvQvCwg0LLR
+iyDQvNC+0LbQtdGC0LUg0LXQs9C+CtC/0YDQvtC/0YPRgdGC0LjRgtGMLCDQvdC+INC/0L7QvNC90LjR
+gtC1LCDRh9GC0L4g0LfQsCDRjdGC0L4g0LLRiwrQv9C+0YLQtdGA0Y/QtdGC0LUg0L7Rh9C60LguINCe
+0LTQvdCw0LrQviwg0LjQvdC+0LPQtNCwINGN0YLQviDRgtC+0LPQvgrRgdGC0L7QuNGCLCDRgtCw0Log
+0LrQsNC6INCy0Ysg0LzQvtC20LXRgtC1INGB0Y3QutC+0L3QvtC80LjRgtGMINCy0YDQtdC80Y8uCgoi
+0J/QvtGB0LvQtdC00L3QtdC1INGB0LvQvtCy0L4g0LTQu9GPINCy0YHQtdGFIiAtINC10YHQu9C4INCy
+0LrQu9GO0YfQtdC90LAK0Y3RgtCwINC+0L/RhtC40Y8sINC/0L4g0LjRgdGC0LXRh9C10L3QuNC4INCy
+0YDQtdC80LXQvdC4INGA0LDRg9C90LTQsCwK0YHQu9C+0LLQviDQvNC+0LPRg9GCINC+0YLQs9Cw0LTR
+i9Cy0LDRgtGMINCy0YHQtSDQutC+0LzQsNC90LTRiy4g0JIK0Y3RgtC+0Lwg0YHQu9GD0YfQsNC1IDEg
+0L7Rh9C60L4g0L/QvtC70YPRh9C40YIg0LrQvtC80LDQvdC00LAK0L7RgtCz0LDQtNCw0LLRiNC10LUg
+0YHQu9C+0LLQvi4KCtCf0L7QsdC10LTQuNGC0LXQu9C10Lwg0YHRh9C40YLQsNC10YLRgdGPINC60L7Q
+vNCw0L3QtNCwLCDQvdCw0LHRgNCw0LLRiNCw0Y8K0L3QtdC+0LHRhdC+0LTQuNC80L7QtSDQtNC70Y8g
+0L/QvtCx0LXQtNGLINC60L7Qu9C40YfQtdGB0YLQstC+INC+0YfQutC+0LIuCtCV0YHQu9C4INC90LAg
+0LzQvtC80LXQvdGCINC30LDQstC10YDRiNC10L3QuNGPINC/0L7QsdC10LTQvdC+0LPQvgrRgNCw0YPQ
+vdC00LAg0YMg0LrQvtC80LDQvdC0INC+0LTQuNC90LDQutC+0LLQvtC1INC60L7Qu9C40YfQtdGB0YLQ
+stC+CtC+0YfQutC+0LIgLSDQv9GA0L7QstC+0LTQuNGC0YzRgdGPINC00L7Qv9C+0LvQvdC40YLQtdC7
+0YzQvdGL0Lkg0YDQsNGD0L3QtAoo0J7QstC10YDRgtCw0LnQvCkuCgrQl9Cw0LTQsNC90LjRjwoK0JXR
+gdC70Lgg0LIg0YDQsNGD0L3QtNC1INC10YHRgtGMINC30LDQtNCw0L3QuNC1IC0g0LrQvtC80LDQvdC0
+0LAg0LzQvtC20LXRggrQv9C+0LvRg9GH0LjRgtGMINCx0L7QvdGD0YHQvdGL0LUg0LHQsNC70Ysg0LfQ
+sCDQtdCz0L4g0LLRi9C/0L7Qu9C90LXQvdC40LUuCgrQldGB0LvQuCDQstCw0Lwg0YPQtNCw0YHRgtGB
+0Y8g0L7QsdGK0Y/RgdC90LjRgtGMINCy0YHQtSDRgdC70L7QstCwINCyCtGB0L7QvtGC0LLQtdGC0YHR
+gtCy0LjQuCDRgSDQt9Cw0LTQsNC90LjQtdC8LCDRgtC+INCy0LDRiNCwINC60L7QvNCw0L3QtNCwCtC/
+0L7Qu9GD0YfQsNC10YIg0LHQvtC90YPRgdC90YvQtSDQvtGH0LrQuCwg0L3QviDRgtC+0LvRjNC60L4g
+0LXRgdC70LgK0LTRgNGD0LPQuNC1INC60L7QvNCw0L3QtNGLINGB0YfQuNGC0LDRjtGCINCy0LDRiNC1
+INCy0YvQv9C+0LvQvdC10L3QuNC1CtGD0LHQtdC00LjRgtC10LvRjNC90YvQvC4g0JrQvtC70LjRh9C1
+0YHRgtCy0L4g0LHQvtC90YPRgdC90YvRhSDQsdCw0LvQvtCyCtC+0L/RgNC10LTQtdC70Y/QtdGC0YHR
+jyDRgdC70YPRh9Cw0LnQvdC+INCyINC40L3RgtC10YDQstCw0LvQtSDQvtGCIDcg0LTQvgoxMC4KCtCj
+0LTQsNGH0LghCgw
+</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
