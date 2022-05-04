@@ -33,7 +33,7 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="qoX-Ps-B3F" kind="show" id="NsO-N9-DEO"/>
+                                            <segue destination="qoX-Ps-B3F" kind="presentation" modalPresentationStyle="fullScreen" id="NsO-N9-DEO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ex-Or-YFf">
@@ -49,7 +49,7 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="U4d-Cx-DAb" kind="show" id="tNP-cg-1Wm"/>
+                                            <segue destination="U4d-Cx-DAb" kind="presentation" modalPresentationStyle="fullScreen" id="tNP-cg-1Wm"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -79,11 +79,11 @@
             <objects>
                 <viewController id="qoX-Ps-B3F" customClass="ChoiceViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Axh-nI-wU5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-5f-JCb">
-                                <rect key="frame" x="132" y="83.5" width="150" height="675"/>
+                                <rect key="frame" x="132" y="110.5" width="150" height="675"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-2Q-SMY">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -98,7 +98,7 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Nlz-C6-sPy" kind="show" id="bpa-Tb-xRU"/>
+                                            <segue destination="Nlz-C6-sPy" kind="presentation" modalPresentationStyle="fullScreen" id="bpa-Tb-xRU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-Vc-D1V">
@@ -280,6 +280,7 @@
                         <outlet property="correctButton" destination="rPM-MO-2B9" id="UCe-sz-Y8w"/>
                         <outlet property="incorrectButton" destination="1HS-be-vcP" id="EML-1P-eiZ"/>
                         <outlet property="nextButton" destination="LjQ-bB-eWZ" id="oJ7-dg-P2k"/>
+                        <outlet property="progress" destination="c2K-dd-ueR" id="II4-B8-ccE"/>
                         <outlet property="scoreLabel" destination="f4M-9R-O4d" id="pM8-da-7SV"/>
                         <outlet property="timeRemainingLabel" destination="b9S-Ja-mFM" id="cY0-5I-efY"/>
                         <outlet property="wordLabel" destination="xyd-Em-moO" id="UNC-H5-u3y"/>
@@ -309,11 +310,11 @@
             <objects>
                 <viewController id="U4d-Cx-DAb" customClass="RulesViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LvF-mo-Yww">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ПРАВИЛА игры" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-RZ-V2A">
-                                <rect key="frame" x="20" y="20" width="374" height="802"/>
+                                <rect key="frame" x="20" y="54" width="374" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -338,7 +339,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bpa-Tb-xRU"/>
+        <segue reference="LQm-t3-Wc1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Background-Bubbles" width="352" height="102"/>

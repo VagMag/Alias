@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var incorrectButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var progress: UIProgressView!
     
     var status: Status = .waiting{
         didSet {
@@ -32,6 +33,7 @@ class GameViewController: UIViewController {
                         self.status = .elapsed
                     }
                     self.timeRemaining -= 1
+                    self.progress.progress = (Float(self.timeRemaining) / Float(60))
                 }
                 timer?.tolerance = 0.2
             } else {
@@ -52,6 +54,7 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        progress.progress = 1
     }
     
     override func viewWillAppear(_ animated: Bool) {
