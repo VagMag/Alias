@@ -18,11 +18,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var incorrectButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var status: Status = .waiting{
         didSet {
             if case .waiting = status {
-                timeRemaining = 60
+                timeRemaining = pausedTimeRemaining
                 timer?.invalidate()
                 timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                     self.statusUpdater(self.status)
@@ -39,7 +40,14 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+    var score: Int = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     private var timeRemaining = 60
+    private var pausedTimeRemaining = 60
     private var timer: Timer?
 
     override func viewDidLoad() {
@@ -51,10 +59,11 @@ class GameViewController: UIViewController {
     }
     
     private func statusUpdater(_ status: Status) {
+        pausedTimeRemaining = timeRemaining
         switch status {
         case .correct:
             disableAnswerButtons()
-            animateBackgroundChanged(for: correctButton, to: .systemMint)
+            animateBackgroundChanged(for: correctButton, to: .systemGreen)
             timeRemainingLabel.text = "Correct"
         case .incorrect:
             disableAnswerButtons()
@@ -65,27 +74,42 @@ class GameViewController: UIViewController {
         case .elapsed:
             disableAnswerButtons()
             timeRemainingLabel.text = "Time elapsed"
-            animateBackgroundChanged(for: incorrectButton, to: .systemRed)
+            nextButton.setTitle("Reset", for: .normal)
         }
     }
 
     @IBAction func correctPressed(sender: UIButton) {
         status = .correct
-                
-        //Disable buttons with animation
-        //Fetch joke
+        score += 1
+        Task {
+            if let joke = await JokeStore.shared.fetchJoke(from: JokeEndpoint.random) {
+                updateJokeLabel(with: joke)
+            }
+        }
     }
     
     @IBAction func incorrectPressed() {
         status = .incorrect
+        score -= 1
     }
     
     @IBAction func nextPressed() {
+        if case .elapsed = status {
+            nextButton.setTitle("Next", for: .normal)
+            score = 0
+            pausedTimeRemaining = 60
+        }
         status = .waiting
+        wordLabel.text = "new word"
         enableAnswerButtons()
         animateBackgroundChanged(for: correctButton, to: .clear)
         animateBackgroundChanged(for: incorrectButton, to: .clear)
     }
+    
+    @IBAction func closePressed() {
+        presentingViewController?.dismiss(animated: true)
+    }
+    
     
     private func disableAnswerButtons() {
         correctButton.isEnabled = false
@@ -105,6 +129,9 @@ class GameViewController: UIViewController {
                     view.backgroundColor = color
                 }
             }
-
+    }
+    
+    private func updateJokeLabel(with joke: Joke) {
+        wordLabel.text = joke.setup + "\n" + joke.punchline
     }
 }
