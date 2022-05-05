@@ -350,6 +350,17 @@
             <point key="canvasLocation" x="861" y="856"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1HS-be-vcP">
+            <size key="intrinsicContentSize" width="96" height="42"/>
+        </designable>
+        <designable name="LjQ-bB-eWZ">
+            <size key="intrinsicContentSize" width="51" height="42"/>
+        </designable>
+        <designable name="rPM-MO-2B9">
+            <size key="intrinsicContentSize" width="81" height="42"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="q0x-VE-kTP"/>
     </inferredMetricsTieBreakers>

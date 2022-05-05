@@ -27,23 +27,13 @@ class GameViewController: UIViewController {
         }
     } */
     
+    var roundDuration = 60
+    
     var status: Status = .waiting{
         didSet {
             if case .waiting = status {
-                timeRemaining = pausedTimeRemaining
-                timer?.invalidate()
-                timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-                    self.statusUpdater(self.status)
-                    if self.timeRemaining == 0 {
-                        timer.invalidate()
-                        self.status = .elapsed
-                    }
-                    self.timeRemaining -= 1
-                    self.progress.progress = (Float(self.timeRemaining) / Float(60))
-                }
-                timer?.tolerance = 0.2
             } else {
-                timer?.invalidate()
+                //timer?.invalidate()
                 statusUpdater(status)
             }
         }
@@ -55,7 +45,7 @@ class GameViewController: UIViewController {
         }
     }
     private var timeRemaining = 60
-    private var pausedTimeRemaining = 60
+    // private var pausedTimeRemaining = 60
     private var timer: Timer?
 
     override func viewDidLoad() {
@@ -63,6 +53,8 @@ class GameViewController: UIViewController {
         progress.progress = 1
         WordStore.shared.setWords(by: topic)
         showWord()
+        timeRemaining = roundDuration // pausedTimeRemaining
+        restartTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,15 +62,15 @@ class GameViewController: UIViewController {
     }
     
     private func statusUpdater(_ status: Status) {
-        pausedTimeRemaining = timeRemaining
+        // pausedTimeRemaining = timeRemaining
         switch status {
         case .correct:
             disableAnswerButtons()
-            animateBackgroundChanged(for: correctButton, to: .systemGreen)
+            animateBackgroundChanged(for: correctButton, to: .systemGreen.withAlphaComponent(0.8))
             timeRemainingLabel.text = "Correct"
         case .incorrect:
             disableAnswerButtons()
-            animateBackgroundChanged(for: incorrectButton, to: .systemRed)
+            animateBackgroundChanged(for: incorrectButton, to: .systemRed.withAlphaComponent(0.8))
             timeRemainingLabel.text = "Incorrect"
         case .waiting:
             timeRemainingLabel.text = "Time remaining: \(timeRemaining)"
@@ -86,17 +78,17 @@ class GameViewController: UIViewController {
             disableAnswerButtons()
             timeRemainingLabel.text = "Time elapsed"
             nextButton.setTitle("Reset", for: .normal)
+            Task {
+                if let joke = await JokeStore.shared.fetchJoke(from: JokeEndpoint.random) {
+                    updateJokeLabel(with: joke)
+                }
+            }
         }
     }
 
     @IBAction func correctPressed(sender: UIButton) {
         status = .correct
         score += 1
-        Task {
-            if let joke = await JokeStore.shared.fetchJoke(from: JokeEndpoint.random) {
-                updateJokeLabel(with: joke)
-            }
-        }
     }
     
     @IBAction func incorrectPressed() {
@@ -109,8 +101,10 @@ class GameViewController: UIViewController {
             // TODO: refactor to function
             nextButton.setTitle("Next", for: .normal)
             score = 0
-            pausedTimeRemaining = 60
+            // pausedTimeRemaining = 60
             wordLabel.text = ""
+            timeRemaining = roundDuration
+            restartTimer()
         }
         status = .waiting
         showWord()
@@ -123,6 +117,19 @@ class GameViewController: UIViewController {
         presentingViewController?.dismiss(animated: true)
     }
     
+    private func restartTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.statusUpdater(self.status)
+            if self.timeRemaining == 0 {
+                timer.invalidate()
+                self.status = .elapsed
+            }
+            self.timeRemaining -= 1
+            self.progress.progress = (Float(self.timeRemaining) / Float(self.roundDuration))
+        }
+        timer?.tolerance = 0.2
+    }
     
     private func disableAnswerButtons() {
         correctButton.isEnabled = false
@@ -134,11 +141,11 @@ class GameViewController: UIViewController {
         incorrectButton.isEnabled = true
     }
     
-    private func animateBackgroundChanged(for view: UIView, to color: UIColor, with flash: UIColor = .white) {
-            UIView.animate(withDuration: 0.1) {
+    private func animateBackgroundChanged(for view: UIView, to color: UIColor, with flash: UIColor = .white.withAlphaComponent(0.5)) {
+            UIView.animate(withDuration: 0.05) {
                 view.backgroundColor = flash
             } completion: { _ in
-                UIView.animate(withDuration: 0.4, delay: 0.5) {
+                UIView.animate(withDuration: 0.4, delay: 0) {
                     view.backgroundColor = color
                 }
             }
