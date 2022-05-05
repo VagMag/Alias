@@ -21,6 +21,12 @@ class GameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var progress: UIProgressView!
     
+    var topic = "english_words_nouns" /* {
+        didSet {
+            WordStore.shared.setWords(by: topic)
+        }
+    } */
+    
     var status: Status = .waiting{
         didSet {
             if case .waiting = status {
@@ -55,6 +61,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         progress.progress = 1
+        WordStore.shared.setWords(by: topic)
+        showWord()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,12 +106,14 @@ class GameViewController: UIViewController {
     
     @IBAction func nextPressed() {
         if case .elapsed = status {
+            // TODO: refactor to function
             nextButton.setTitle("Next", for: .normal)
             score = 0
             pausedTimeRemaining = 60
+            wordLabel.text = ""
         }
         status = .waiting
-        wordLabel.text = "new word"
+        showWord()
         enableAnswerButtons()
         animateBackgroundChanged(for: correctButton, to: .clear)
         animateBackgroundChanged(for: incorrectButton, to: .clear)
@@ -136,5 +146,9 @@ class GameViewController: UIViewController {
     
     private func updateJokeLabel(with joke: Joke) {
         wordLabel.text = joke.setup + "\n" + joke.punchline
+    }
+    
+    private func showWord() {
+        wordLabel.text = WordStore.shared.randomWord()
     }
 }
