@@ -22,10 +22,10 @@ class GameViewController: UIViewController {
     @IBOutlet weak var progress: UIProgressView!
     
     var topic = "english_words_nouns" /* {
-        didSet {
-            WordStore.shared.setWords(by: topic)
-        }
-    } */
+                                       didSet {
+                                       WordStore.shared.setWords(by: topic)
+                                       }
+                                       } */
     
     var status: Status = .waiting{
         didSet {
@@ -57,7 +57,7 @@ class GameViewController: UIViewController {
     private var timeRemaining = 60
     private var pausedTimeRemaining = 60
     private var timer: Timer?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         progress.progress = 1
@@ -88,7 +88,7 @@ class GameViewController: UIViewController {
             nextButton.setTitle("Reset", for: .normal)
         }
     }
-
+    
     @IBAction func correctPressed(sender: UIButton) {
         status = .correct
         score += 1
@@ -105,6 +105,20 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func nextPressed() {
+        let num = 4
+        let randNum = Int.random(in: 1...10)
+        if randNum == num {
+            let alert = UIAlertController(title: "ACTION",
+                                          message: "Dance!", //need random
+                                          preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Nope",
+                                          style: UIAlertAction.Style.default,
+                                          handler: {_ in self.score -= 1 }))
+            alert.addAction(UIAlertAction(title: "Do It!",
+                                          style: UIAlertAction.Style.cancel,
+                                          handler: {_ in self.score += 3 }))
+            self.present(alert, animated: true, completion: nil)
+        }
         if case .elapsed = status {
             // TODO: refactor to function
             nextButton.setTitle("Next", for: .normal)
@@ -135,13 +149,13 @@ class GameViewController: UIViewController {
     }
     
     private func animateBackgroundChanged(for view: UIView, to color: UIColor, with flash: UIColor = .white) {
-            UIView.animate(withDuration: 0.1) {
-                view.backgroundColor = flash
-            } completion: { _ in
-                UIView.animate(withDuration: 0.4, delay: 0.5) {
-                    view.backgroundColor = color
-                }
+        UIView.animate(withDuration: 0.1) {
+            view.backgroundColor = flash
+        } completion: { _ in
+            UIView.animate(withDuration: 0.4, delay: 0.5) {
+                view.backgroundColor = color
             }
+        }
     }
     
     private func updateJokeLabel(with joke: Joke) {
