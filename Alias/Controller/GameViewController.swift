@@ -21,11 +21,11 @@ class GameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var progress: UIProgressView!
     
-    var topic = "english_words_nouns" /* {
+    var topic = "russian_words_nouns" {
         didSet {
             WordStore.shared.setWords(by: topic)
         }
-    } */
+    }
     
     var roundDuration = 60
     
