@@ -42,6 +42,7 @@
 		278513D928203226004924D0 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		278513DB28203250004924D0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		278513DD282033B4004924D0 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		D906AD492825A68100DFC524 /* russian_words_nouns.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = russian_words_nouns.csv; sourceTree = "<group>"; };
 		DA6889C7282456A6005C89D9 /* GradientBorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBorderButton.swift; sourceTree = "<group>"; };
 		DA6889C9282456BA005C89D9 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		DA6889CB282456C3005C89D9 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 			children = (
 				278513C3281FC557004924D0 /* Assets.xcassets */,
 				DA9B3A002823CD18009BA30A /* english_words_nouns.csv */,
+				D906AD492825A68100DFC524 /* russian_words_nouns.csv */,
 			);
 			path = Media;
 			sourceTree = "<group>";
