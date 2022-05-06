@@ -95,10 +95,11 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="buttonPressed:" destination="qoX-Ps-B3F" eventType="touchUpInside" id="jXq-WP-5bl"/>
                                             <segue destination="Nlz-C6-sPy" kind="presentation" modalPresentationStyle="fullScreen" id="bpa-Tb-xRU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-Vc-D1V">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-Vc-D1V">
                                         <rect key="frame" x="0.0" y="219" width="368" height="169"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Тема2">
@@ -107,10 +108,11 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="buttonPressed:" destination="qoX-Ps-B3F" eventType="touchUpInside" id="1Fl-M6-XJK"/>
                                             <segue destination="Nlz-C6-sPy" kind="show" id="LQm-t3-Wc1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-5b-rmE">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-5b-rmE">
                                         <rect key="frame" x="0.0" y="438" width="368" height="169"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Тема3">
@@ -119,10 +121,11 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="buttonPressed:" destination="qoX-Ps-B3F" eventType="touchUpInside" id="gBv-UD-8Ll"/>
                                             <segue destination="Nlz-C6-sPy" kind="show" id="Q34-Kh-Y6t"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-cE-aOM">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-cE-aOM">
                                         <rect key="frame" x="0.0" y="657" width="368" height="169"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Тема4">
@@ -131,6 +134,7 @@
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="buttonPressed:" destination="qoX-Ps-B3F" eventType="touchUpInside" id="ReT-ab-fJD"/>
                                             <segue destination="Nlz-C6-sPy" kind="show" id="q0x-VE-kTP"/>
                                         </connections>
                                     </button>
@@ -148,6 +152,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SUQ-S5-Gay"/>
+                    <connections>
+                        <outlet property="topicFour" destination="4fm-cE-aOM" id="KFt-rI-ead"/>
+                        <outlet property="topicOne" destination="fAV-2Q-SMY" id="Zdl-3x-QPI"/>
+                        <outlet property="topicThree" destination="jnO-5b-rmE" id="7Z9-40-jrX"/>
+                        <outlet property="topicTwo" destination="VdW-Vc-D1V" id="759-9h-afa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6zd-Ol-FgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
