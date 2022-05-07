@@ -41,5 +41,8 @@ class ChoiceViewController: UIViewController {
         guard let vc = segue.destination as? GameViewController else { return }
         vc.topic = selectedFilePath
     }
+    @IBAction func closePressed(_ sender: UIButton) {
+        presentingViewController?.dismiss(animated: true)
+    }
     
 }

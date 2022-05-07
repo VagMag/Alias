@@ -186,6 +186,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="closePressed" destination="Nlz-C6-sPy" eventType="touchUpInside" id="dRh-Og-rqc"/>
+                                    <action selector="closePressed:" destination="qoX-Ps-B3F" eventType="touchUpInside" id="oSv-bc-JRO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -399,11 +400,29 @@
         <designable name="1HS-be-vcP">
             <size key="intrinsicContentSize" width="96" height="42"/>
         </designable>
+        <designable name="2ex-Or-YFf">
+            <size key="intrinsicContentSize" width="82" height="31"/>
+        </designable>
+        <designable name="4fm-cE-aOM">
+            <size key="intrinsicContentSize" width="67" height="31"/>
+        </designable>
         <designable name="LjQ-bB-eWZ">
             <size key="intrinsicContentSize" width="51" height="42"/>
         </designable>
+        <designable name="VdW-Vc-D1V">
+            <size key="intrinsicContentSize" width="66.333333333333329" height="31"/>
+        </designable>
+        <designable name="fAV-2Q-SMY">
+            <size key="intrinsicContentSize" width="68.333333333333329" height="31"/>
+        </designable>
+        <designable name="jnO-5b-rmE">
+            <size key="intrinsicContentSize" width="66.666666666666671" height="31"/>
+        </designable>
         <designable name="rPM-MO-2B9">
             <size key="intrinsicContentSize" width="81" height="42"/>
+        </designable>
+        <designable name="zOV-2u-P2A">
+            <size key="intrinsicContentSize" width="71" height="31"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
