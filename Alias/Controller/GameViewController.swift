@@ -21,6 +21,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var progress: UIProgressView!
     
+    var sound = SoundBrain()
+    
     var topic = "russian_words_nouns" {
         didSet {
             WordStore.shared.setWords(by: topic)
@@ -89,11 +91,13 @@ class GameViewController: UIViewController {
     @IBAction func correctPressed(sender: UIButton) {
         status = .correct
         score += 1
+        sound.answerRightSound()
     }
     
     @IBAction func incorrectPressed() {
         status = .incorrect
         score -= 1
+        sound.skipWordSound()
     }
     
     @IBAction func nextPressed() {
