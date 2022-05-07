@@ -23,6 +23,7 @@
 		D9070E3528268A0300825BBB /* SoundBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9070E3428268A0300825BBB /* SoundBrain.swift */; };
 		D9070E392826909200825BBB /* rightSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D9070E372826909200825BBB /* rightSound.mp3 */; };
 		D9070E3A2826909200825BBB /* skipWordSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D9070E382826909200825BBB /* skipWordSound.mp3 */; };
+		D9B52F562826EAEC00A4296B /* RandomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B52F552826EAEC00A4296B /* RandomAction.swift */; };
 		DA6889C8282456A6005C89D9 /* GradientBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6889C7282456A6005C89D9 /* GradientBorderButton.swift */; };
 		DA6889CA282456BB005C89D9 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6889C9282456BA005C89D9 /* UIImage+.swift */; };
 		DA6889CC282456C3005C89D9 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6889CB282456C3005C89D9 /* UIView+Border.swift */; };
@@ -54,6 +55,7 @@
 		D9070E3428268A0300825BBB /* SoundBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundBrain.swift; sourceTree = "<group>"; };
 		D9070E372826909200825BBB /* rightSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rightSound.mp3; sourceTree = "<group>"; };
 		D9070E382826909200825BBB /* skipWordSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = skipWordSound.mp3; sourceTree = "<group>"; };
+		D9B52F552826EAEC00A4296B /* RandomAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAction.swift; sourceTree = "<group>"; };
 		DA6889C7282456A6005C89D9 /* GradientBorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBorderButton.swift; sourceTree = "<group>"; };
 		DA6889C9282456BA005C89D9 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		DA6889CB282456C3005C89D9 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				D9070E3428268A0300825BBB /* SoundBrain.swift */,
+				D9B52F552826EAEC00A4296B /* RandomAction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				DAB8B364282294A500ABA6D0 /* Joke.swift in Sources */,
 				278513DC28203250004924D0 /* GameViewController.swift in Sources */,
 				278513BD281FC555004924D0 /* SceneDelegate.swift in Sources */,
+				D9B52F562826EAEC00A4296B /* RandomAction.swift in Sources */,
 				DA6889CA282456BB005C89D9 /* UIImage+.swift in Sources */,
 				DAB8B367282294A500ABA6D0 /* Endpoint.swift in Sources */,
 				DAB8B363282294A500ABA6D0 /* JokeEndpoint.swift in Sources */,
