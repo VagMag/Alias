@@ -4,8 +4,8 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EfW-d2-VEw">
                                 <rect key="frame" x="139" y="400.66666666666669" width="150" height="125.00000000000006"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-2u-P2A">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-2u-P2A" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="NT8-70-2iv"/>
@@ -28,15 +28,21 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Играть">
-                                            <backgroundConfiguration key="background" cornerRadius="19">
-                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                            </backgroundConfiguration>
+                                            <backgroundConfiguration key="background" cornerRadius="19"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="qoX-Ps-B3F" kind="presentation" modalPresentationStyle="fullScreen" id="NsO-N9-DEO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ex-Or-YFf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ex-Or-YFf" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="75" width="150" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="A9P-gk-Kwb"/>
@@ -44,10 +50,16 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Правила">
-                                            <backgroundConfiguration key="background" cornerRadius="19">
-                                                <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </backgroundConfiguration>
+                                            <backgroundConfiguration key="background" cornerRadius="19"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="U4d-Cx-DAb" kind="presentation" modalPresentationStyle="fullScreen" id="tNP-cg-1Wm"/>
                                         </connections>
@@ -57,12 +69,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIi-GE-izN">
                                 <rect key="frame" x="172.66666666666666" y="94" width="82.666666666666657" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="EfW-d2-VEw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YDS-0s-D0R"/>
                             <constraint firstItem="EfW-d2-VEw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YKP-Md-A5k"/>
@@ -84,10 +96,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-5f-JCb">
-                                <rect key="frame" x="30" y="50" width="368" height="826"/>
+                                <rect key="frame" x="30" y="150" width="368" height="626"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-2Q-SMY" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="368" height="169"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="368" height="119"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=" Тема1">
                                             <backgroundConfiguration key="background" cornerRadius="19"/>
@@ -106,7 +118,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-Vc-D1V" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="219" width="368" height="169"/>
+                                        <rect key="frame" x="0.0" y="169" width="368" height="119"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Тема2">
                                             <backgroundConfiguration key="background" cornerRadius="19"/>
@@ -125,7 +137,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-5b-rmE" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="438" width="368" height="169"/>
+                                        <rect key="frame" x="0.0" y="338" width="368" height="119"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Тема3">
                                             <backgroundConfiguration key="background" cornerRadius="19"/>
@@ -144,7 +156,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-cE-aOM" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="657" width="368" height="169"/>
+                                        <rect key="frame" x="0.0" y="507" width="368" height="119"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Тема4">
                                             <backgroundConfiguration key="background" cornerRadius="19"/>
@@ -164,13 +176,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="QMZ-dR-wRZ">
+                                <rect key="frame" x="357.66666666666669" y="44" width="70.333333333333314" height="51"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="top">
+                                    <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="closePressed" destination="Nlz-C6-sPy" eventType="touchUpInside" id="dRh-Og-rqc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dlx-Mv-q6B"/>
                         <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="QMZ-dR-wRZ" firstAttribute="top" secondItem="Dlx-Mv-q6B" secondAttribute="top" id="4Hh-B7-9SR"/>
                             <constraint firstItem="Dlx-Mv-q6B" firstAttribute="trailing" secondItem="eHM-5f-JCb" secondAttribute="trailing" constant="30" id="8tV-SQ-Ifh"/>
                             <constraint firstItem="eHM-5f-JCb" firstAttribute="centerX" secondItem="Axh-nI-wU5" secondAttribute="centerX" id="DZU-id-u8d"/>
-                            <constraint firstItem="eHM-5f-JCb" firstAttribute="top" secondItem="Axh-nI-wU5" secondAttribute="top" constant="50" id="XWB-X1-6u5"/>
+                            <constraint firstItem="Dlx-Mv-q6B" firstAttribute="trailing" secondItem="QMZ-dR-wRZ" secondAttribute="trailing" id="LoB-JF-Zmm"/>
+                            <constraint firstItem="eHM-5f-JCb" firstAttribute="top" secondItem="Axh-nI-wU5" secondAttribute="top" constant="150" id="XWB-X1-6u5"/>
                             <constraint firstItem="eHM-5f-JCb" firstAttribute="centerY" secondItem="Axh-nI-wU5" secondAttribute="centerY" id="hs4-H3-GaW"/>
                             <constraint firstItem="eHM-5f-JCb" firstAttribute="leading" secondItem="Dlx-Mv-q6B" secondAttribute="leading" constant="30" id="ofS-vt-9u1"/>
                         </constraints>
@@ -289,7 +315,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="10" id="bX9-ti-8EG"/>
                                         </constraints>
-                                        <color key="progressTintColor" red="1" green="0.45854175089999999" blue="0.6605013609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="progressTintColor" name="AccentColor"/>
                                         <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </progressView>
                                 </subviews>
@@ -336,21 +362,6 @@
             </objects>
             <point key="canvasLocation" x="1710" y="80"/>
         </scene>
-        <!--Result View Controller-->
-        <scene sceneID="AEb-z6-h3q">
-            <objects>
-                <viewController id="rpw-lx-O2y" customClass="ResultViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DZg-kA-uHW">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="OEi-tQ-kGG"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IXO-n2-8HI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2510" y="105"/>
-        </scene>
         <!--Rules View Controller-->
         <scene sceneID="4HF-X3-Tgj">
             <objects>
@@ -361,14 +372,14 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ПРАВИЛА игры" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-RZ-V2A">
                                 <rect key="frame" x="20" y="54" width="388" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="irn-ds-wV6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="irn-ds-wV6" firstAttribute="bottom" secondItem="NrM-RZ-V2A" secondAttribute="bottom" constant="20" id="2C7-aH-hHj"/>
                             <constraint firstItem="NrM-RZ-V2A" firstAttribute="centerX" secondItem="LvF-mo-Yww" secondAttribute="centerX" id="5lM-9m-dwe"/>
@@ -401,14 +412,8 @@
     <resources>
         <image name="Background-Bubbles" width="352" height="102"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
