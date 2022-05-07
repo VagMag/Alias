@@ -20,9 +20,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var incorrectButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var progress: UIProgressView!
-    
+
     var sound = SoundBrain()
-    
+    var randomAction = RandomAction()
     var topic = "russian_words_nouns" {
         didSet {
             WordStore.shared.setWords(by: topic)
@@ -99,8 +99,24 @@ class GameViewController: UIViewController {
         score -= 1
         sound.skipWordSound()
     }
-    
+
     @IBAction func nextPressed() {
+        let random = randomAction.action()
+        let num = 4
+        let randNum = Int.random(in: 1...10)
+        if randNum == num {
+            let alert = UIAlertController(title: "ACTION",
+                                          message: random, //need random
+                                          preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Nope",
+                                          style: UIAlertAction.Style.default,
+                                          handler: {_ in self.score -= 1 }))
+            alert.addAction(UIAlertAction(title: "Do It!",
+                                          style: UIAlertAction.Style.cancel,
+                                          handler: {_ in self.score += 3 }))
+            self.present(alert, animated: true, completion: nil)
+        }
+
         if case .elapsed = status {
             // TODO: refactor to function
             nextButton.setTitle("Next", for: .normal)
