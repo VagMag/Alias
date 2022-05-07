@@ -14,6 +14,10 @@ class RulesViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    @IBAction func backButton(_ sender: UIButton) {
+        presentingViewController?.dismiss(animated: true)
+
+    }
     
 
     /*
