@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="EfW-d2-VEw">
-                                <rect key="frame" x="139" y="400.66666666666669" width="150" height="125.00000000000006"/>
+                                <rect key="frame" x="132" y="385.5" width="150" height="125"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-2u-P2A" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="50"/>
@@ -65,8 +65,8 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIi-GE-izN">
-                                <rect key="frame" x="172.66666666666666" y="94" width="82.666666666666657" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <rect key="frame" x="106.5" y="94" width="201.5" height="119.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <color key="textColor" name="AccentColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -90,18 +90,17 @@
             <objects>
                 <viewController id="qoX-Ps-B3F" customClass="ChoiceViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Axh-nI-wU5">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-5f-JCb">
-                                <rect key="frame" x="30" y="150" width="368" height="626"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-5f-JCb">
+                                <rect key="frame" x="30" y="150" width="354" height="596"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-2Q-SMY" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="368" height="119"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title=" Тема1">
-                                            <backgroundConfiguration key="background" cornerRadius="19"/>
-                                        </buttonConfiguration>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="130.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title=" Тема1"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -116,11 +115,10 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-Vc-D1V" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="169" width="368" height="119"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Тема2">
-                                            <backgroundConfiguration key="background" cornerRadius="19"/>
-                                        </buttonConfiguration>
+                                        <rect key="frame" x="0.0" y="155.5" width="354" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Тема2"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -131,15 +129,14 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonPressed:" destination="qoX-Ps-B3F" eventType="touchUpInside" id="1Fl-M6-XJK"/>
-                                            <segue destination="Nlz-C6-sPy" kind="show" id="LQm-t3-Wc1"/>
+                                            <segue destination="Nlz-C6-sPy" kind="presentation" modalPresentationStyle="fullScreen" id="LQm-t3-Wc1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnO-5b-rmE" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="338" width="368" height="119"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Тема3">
-                                            <backgroundConfiguration key="background" cornerRadius="19"/>
-                                        </buttonConfiguration>
+                                        <rect key="frame" x="0.0" y="310.5" width="354" height="130.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Тема3"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -150,15 +147,14 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonPressed:" destination="qoX-Ps-B3F" eventType="touchUpInside" id="gBv-UD-8Ll"/>
-                                            <segue destination="Nlz-C6-sPy" kind="show" id="Q34-Kh-Y6t"/>
+                                            <segue destination="Nlz-C6-sPy" kind="presentation" modalPresentationStyle="fullScreen" id="Q34-Kh-Y6t"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-cE-aOM" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="507" width="368" height="119"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Тема4">
-                                            <backgroundConfiguration key="background" cornerRadius="19"/>
-                                        </buttonConfiguration>
+                                        <rect key="frame" x="0.0" y="466" width="354" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Тема4"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="10"/>
@@ -169,13 +165,13 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="buttonPressed:" destination="qoX-Ps-B3F" eventType="touchUpInside" id="ReT-ab-fJD"/>
-                                            <segue destination="Nlz-C6-sPy" kind="show" id="q0x-VE-kTP"/>
+                                            <segue destination="Nlz-C6-sPy" kind="presentation" modalPresentationStyle="fullScreen" id="q0x-VE-kTP"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="QMZ-dR-wRZ">
-                                <rect key="frame" x="357.66666666666669" y="44" width="70.333333333333314" height="51"/>
+                                <rect key="frame" x="343.5" y="44" width="70.5" height="51"/>
                                 <buttonConfiguration key="configuration" style="plain" imagePlacement="top">
                                     <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
@@ -217,38 +213,38 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="Nlz-C6-sPy" customClass="GameViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DYo-l2-6bd">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="500" verticalCompressionResistancePriority="1000" image="Background-Bubbles" translatesAutoresizingMaskIntoConstraints="NO" id="fBm-sE-VZU">
-                                <rect key="frame" x="0.0" y="824" width="428" height="102"/>
+                                <rect key="frame" x="0.0" y="794" width="414" height="102"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="MgD-pr-cTC"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="djP-Gc-9Jg">
-                                <rect key="frame" x="20" y="44" width="388" height="848"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="djP-Gc-9Jg">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time remaining:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9S-Ja-mFM">
-                                        <rect key="frame" x="0.0" y="0.0" width="388" height="65.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="46.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4M-9R-O4d">
-                                        <rect key="frame" x="0.0" y="75.333333333333329" width="388" height="64.999999999999986"/>
+                                        <rect key="frame" x="0.0" y="71.5" width="374" height="46.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="1000" text="Word in question" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xyd-Em-moO">
-                                        <rect key="frame" x="0.0" y="150.33333333333334" width="388" height="407.66666666666663"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="143" width="374" height="325"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPM-MO-2B9" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="568" width="388" height="80"/>
+                                        <rect key="frame" x="0.0" y="493" width="374" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="c0l-q0-fWP"/>
                                         </constraints>
@@ -268,7 +264,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HS-be-vcP" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="658" width="388" height="80"/>
+                                        <rect key="frame" x="0.0" y="598" width="374" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="FR8-jq-Feu"/>
                                         </constraints>
@@ -288,7 +284,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjQ-bB-eWZ" userLabel="Next-Reset" customClass="GradientBorderButton" customModule="Alias" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="748" width="388" height="80"/>
+                                        <rect key="frame" x="0.0" y="703" width="374" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="FXM-UY-edd"/>
                                         </constraints>
@@ -308,7 +304,7 @@
                                         </connections>
                                     </button>
                                     <progressView opaque="NO" contentMode="scaleToFill" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c2K-dd-ueR">
-                                        <rect key="frame" x="0.0" y="838" width="388" height="11"/>
+                                        <rect key="frame" x="0.0" y="808" width="374" height="11"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.2770131528" green="0.3800790906" blue="0.57570761439999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -320,7 +316,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="tjc-pG-yek">
-                                <rect key="frame" x="357.66666666666669" y="44" width="70.333333333333314" height="51"/>
+                                <rect key="frame" x="343.5" y="44" width="70.5" height="51"/>
                                 <buttonConfiguration key="configuration" style="plain" imagePlacement="top">
                                     <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
@@ -366,13 +362,13 @@
             <objects>
                 <viewController id="U4d-Cx-DAb" customClass="RulesViewController" customModule="Alias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LvF-mo-Yww">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NrM-RZ-V2A">
-                                <rect key="frame" x="20" y="94" width="388" height="778"/>
+                                <rect key="frame" x="20" y="94" width="374" height="748"/>
                                 <color key="backgroundColor" red="0.1450980392" green="0.17254901959999999" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <mutableString key="text" base64-UTF8="YES">
+                                <string key="text" base64-UTF8="YES">
 0J/RgNCw0LLQuNC70LAg0LjQs9GA0YsKCiAKQWxpYXM6INCh0LrQsNC20Lgg0LjQvdCw0YfQtQoK0JIg
 0LjQs9GA0YMg0LjQs9GA0LDRjtGCINC60L7QvNCw0L3QtNCw0LzQuCDQuNC3INC00LLRg9GFINC40LvQ
 uCDQsdC+0LvQtdC1CtGH0LXQu9C+0LLQtdC6LiDQl9Cw0LTQsNGH0LAg0LrQsNC20LTQvtCz0L4g0LjQ
@@ -451,13 +447,13 @@ INCy0YvQv9C+0LvQvdC10L3QuNC1CtGD0LHQtdC00LjRgtC10LvRjNC90YvQvC4g0JrQvtC70LjRh9C1
 0YHRgtCy0L4g0LHQvtC90YPRgdC90YvRhSDQsdCw0LvQvtCyCtC+0L/RgNC10LTQtdC70Y/QtdGC0YHR
 jyDRgdC70YPRh9Cw0LnQvdC+INCyINC40L3RgtC10YDQstCw0LvQtSDQvtGCIDcg0LTQvgoxMC4KCtCj
 0LTQsNGH0LghCgw
-</mutableString>
+</string>
                                 <color key="textColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-yp-ooA">
-                                <rect key="frame" x="357.66666666666669" y="44" width="70.333333333333314" height="51"/>
+                                <rect key="frame" x="343.5" y="44" width="70.5" height="51"/>
                                 <buttonConfiguration key="configuration" style="plain" imagePlacement="top">
                                     <imageReference key="image" image="xmark.circle.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
@@ -498,19 +494,19 @@ jyDRgdC70YPRh9Cw0LnQvdC+INCyINC40L3RgtC10YDQstCw0LvQtSDQvtGCIDcg0LTQvgoxMC4KCtCj
             <size key="intrinsicContentSize" width="60" height="42"/>
         </designable>
         <designable name="4fm-cE-aOM">
-            <size key="intrinsicContentSize" width="67" height="31"/>
+            <size key="intrinsicContentSize" width="73" height="42"/>
         </designable>
         <designable name="LjQ-bB-eWZ">
             <size key="intrinsicContentSize" width="51" height="42"/>
         </designable>
         <designable name="VdW-Vc-D1V">
-            <size key="intrinsicContentSize" width="66.333333333333329" height="31"/>
+            <size key="intrinsicContentSize" width="72" height="42"/>
         </designable>
         <designable name="fAV-2Q-SMY">
-            <size key="intrinsicContentSize" width="68.333333333333329" height="31"/>
+            <size key="intrinsicContentSize" width="74" height="42"/>
         </designable>
         <designable name="jnO-5b-rmE">
-            <size key="intrinsicContentSize" width="66.666666666666671" height="31"/>
+            <size key="intrinsicContentSize" width="73" height="42"/>
         </designable>
         <designable name="rPM-MO-2B9">
             <size key="intrinsicContentSize" width="81" height="42"/>
