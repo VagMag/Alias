@@ -7,8 +7,23 @@ class HeaderTableView: UIView {
         let imageView = UIImageView()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFill
-        
         return imageView
+    }()
+    
+    let textLabel: InsetLabel = {
+        let textLabel = InsetLabel()
+        textLabel.font = .preferredFont(forTextStyle: .title2)
+        textLabel.textColor = .tintColor
+        textLabel.textAlignment = .center
+        textLabel.contentInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        return textLabel
+    }()
+
+    private let blurView: UIVisualEffectView = {
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.cornerRadius = 10
+        return blurView
     }()
     
     private var containerView = UIView()
@@ -44,6 +59,8 @@ class HeaderTableView: UIView {
     private func createViews() {
         addSubview(containerView)
         containerView.addSubview(imageView)
+        containerView.addSubview(blurView)
+        containerView.addSubview(textLabel)
     }
     
     // Set constraints
@@ -56,6 +73,8 @@ class HeaderTableView: UIView {
         
         containerView.translatesAutoresizingMaskIntoConstraints = false
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        blurView.translatesAutoresizingMaskIntoConstraints = false
         
         containerView.widthAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
         containerViewHeight = containerView.heightAnchor.constraint(equalTo: self.heightAnchor)
@@ -65,5 +84,24 @@ class HeaderTableView: UIView {
         imageViewBottom.isActive = true
         imageViewHeight = imageView.heightAnchor.constraint(equalTo: self.heightAnchor)
         imageViewHeight.isActive = true
+        
+        NSLayoutConstraint.activate([
+            textLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            textLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+
+        ])
+        
+//        NSLayoutConstraint.activate([
+//          blurView.topAnchor.constraint(equalTo: textLabel.topAnchor),
+//          blurView.leadingAnchor.constraint(equalTo: textLabel.leadingAnchor),
+//          blurView.heightAnchor.constraint(equalTo: textLabel.heightAnchor),
+//          blurView.widthAnchor.constraint(equalTo: textLabel.widthAnchor)
+//        ])
+        NSLayoutConstraint.activate([
+          blurView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+          blurView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+          blurView.heightAnchor.constraint(equalTo: textLabel.heightAnchor),
+          blurView.widthAnchor.constraint(equalTo: textLabel.widthAnchor)
+        ])
     }
 }

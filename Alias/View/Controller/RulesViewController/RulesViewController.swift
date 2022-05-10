@@ -10,6 +10,7 @@ class RulesViewController: UIViewController {
     // MARK: Properties
     var sectionTitles = [String]()
     var sectionRows = [[String]]()
+    var headerTitle = ""
 
     var editUserInfoButton: UIButton = {
         let button = UIButton()
@@ -27,6 +28,10 @@ class RulesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sectionTitles = Rules.titles
+        sectionRows = Rules.paragraphs
+        headerTitle = "Правила игры"
+        
         view.backgroundColor = UIColor(named: "BlueColor")
         setTableView()
         setHeader()
@@ -38,9 +43,6 @@ class RulesViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         editUserInfoButton.layer.cornerRadius = editUserInfoButton.frame.width / 2
-        sectionTitles = Rules.titles
-        sectionRows = Rules.paragraphs
-        tableView.reloadData()
     }
 
     // MARK: Override Methods
@@ -77,6 +79,7 @@ class RulesViewController: UIViewController {
                                                    width: view.frame.width,
                                                    height: view.frame.width * 2 / 3))
         header.imageView.image = UIImage(named: "StreetImage")
+        header.textLabel.text = headerTitle
         tableView.tableHeaderView = header
     }
     
@@ -103,7 +106,8 @@ extension RulesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.textColor = .gray
+        header.textLabel?.font = .preferredFont(forTextStyle: .title1)
+        header.textLabel?.textColor = .tintColor
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
