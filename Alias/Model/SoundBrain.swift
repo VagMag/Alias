@@ -13,18 +13,18 @@ final class SoundBrain {
     var audio:AVPlayer!
     
     func answerRightSound() {
-            playSound(url: "rightSound")
-           
-        }
-
-        func skipWordSound() {
-            playSound(url: "skipWordSound")
-            
-        }
+        playSound(url: "rightSound")
         
-            func playSound(url: String) {
-            let url = Bundle.main.url(forResource: url, withExtension: "mp3")
-            audio = AVPlayer.init(url: url!)
-                audio.play()
-        }
     }
+    
+    func skipWordSound() {
+        playSound(url: "skipWordSound")
+        
+    }
+    
+    func playSound(url: String) {
+        let url = Bundle.main.url(forResource: url, withExtension: "mp3")
+        audio = AVPlayer.init(url: url!)
+        audio.play()
+    }
+}

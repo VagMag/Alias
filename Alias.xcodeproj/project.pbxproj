@@ -98,6 +98,7 @@
 			children = (
 				D9070E3628268A0F00825BBB /* Model */,
 				278513CF281FDA4D004924D0 /* View */,
+				278513D0281FDA56004924D0 /* Controller */,
 				DAB8B35C282294A500ABA6D0 /* JokeService */,
 				DAB8B360282294A500ABA6D0 /* Networking */,
 				DA9B39FC2823CD01009BA30A /* WordService */,
@@ -107,8 +108,6 @@
 				278513BC281FC555004924D0 /* SceneDelegate.swift */,
 				278513C5281FC557004924D0 /* LaunchScreen.storyboard */,
 				278513C8281FC557004924D0 /* Info.plist */,
-				D9070E372826909200825BBB /* rightSound.mp3 */,
-				D9070E382826909200825BBB /* skipWordSound.mp3 */,
 			);
 			path = Alias;
 			sourceTree = "<group>";
@@ -116,7 +115,6 @@
 		278513CF281FDA4D004924D0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				278513D0281FDA56004924D0 /* Controller */,
 				278513C0281FC555004924D0 /* Main.storyboard */,
 				DA6889C7282456A6005C89D9 /* GradientBorderButton.swift */,
 			);
@@ -131,7 +129,8 @@
 				278513D928203226004924D0 /* ChoiceViewController.swift */,
 				278513DB28203250004924D0 /* GameViewController.swift */,
 			);
-			path = Controller;
+			name = Controller;
+			path = View/Controller;
 			sourceTree = "<group>";
 		};
 		D9070E3628268A0F00825BBB /* Model */ = {
@@ -168,6 +167,8 @@
 				D9045F332825B36E001A8A16 /* random_words_nouns.csv */,
 				D906AD492825A68100DFC524 /* russian_words_nouns.csv */,
 				D9045F312825B233001A8A16 /* sport_words_nouns.csv */,
+				D9070E372826909200825BBB /* rightSound.mp3 */,
+				D9070E382826909200825BBB /* skipWordSound.mp3 */,
 			);
 			path = Media;
 			sourceTree = "<group>";
